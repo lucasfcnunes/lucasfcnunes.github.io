@@ -16,10 +16,10 @@ lucasfcnunes:
   linkedin: https://www.linkedin.com/in/lucasfcnunes
   email:
     lucasfc.nunes@:
-      gmail.com: # preffered @ personal | PIX
+      gmail.com: # preferred @ personal | PIX
       incentive.me:
         lucas@: # preferred @ incentive.me
-      poli.ufrj.br: # preffered @ ufrj.br
+      poli.ufrj.br: # preferred @ ufrj.br
         ufrj.br:
       protonmail.com:
       outlook.com:
