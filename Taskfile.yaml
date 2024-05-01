@@ -1,0 +1,16 @@
+version: '3'
+env:
+  MICROMAMBA_ENV: lucasfcnunes.github.io
+  MICROMAMBA_FILE: environment.yaml
+  MICROMAMBA_RUN: micromamba -n '{{.MICROMAMBA_ENV}}' run
+tasks:
+  env:set:
+    sources:
+      - '{{.MICROMAMBA_FILE}}'
+    cmd: micromamba create -n '{{.MICROMAMBA_ENV}}' -f './environment.yaml' -y
+  convert:
+    deps:
+      - env:set
+    sources:
+      - './docs/**.md'
+    cmd: '{{.MICROMAMBA_RUN}} pandoc -f markdown -t html5 ./docs/**.md > index.html'
