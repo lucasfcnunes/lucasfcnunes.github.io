@@ -3,14 +3,28 @@ env:
   MICROMAMBA_ENV: lucasfcnunes.github.io
   MICROMAMBA_FILE: environment.yaml
   MICROMAMBA_RUN: micromamba -n '{{.MICROMAMBA_ENV}}' run
+  PANDOC_RUN: ./pandoc.sh
+  PANDOC_DEFAULTS: ./pandoc_defaults.yaml
+  PANDOC_INPUT: ./docs/**.md
+  PANDOC_OUTPUT: ./index.html
 tasks:
   env:set:
     sources:
       - '{{.MICROMAMBA_FILE}}'
     cmd: micromamba create -n '{{.MICROMAMBA_ENV}}' -f './environment.yaml' -y
-  convert:
+  index.html:
     deps:
       - env:set
     sources:
-      - './docs/**.md'
-    cmd: '{{.MICROMAMBA_RUN}} pandoc -f markdown -t html5 ./docs/**.md > index.html'
+      - '{{.PANDOC_INPUT}}'
+      - '{{.PANDOC_RUN}}'
+      - '{{.PANDOC_DEFAULTS}}'
+    generates:
+      - '{{.PANDOC_OUTPUT}}'
+    cmds:
+      - >-
+        {{.MICROMAMBA_RUN}} {{.PANDOC_RUN}}
+  pandoc:info:
+    cmds:
+      - '{{.MICROMAMBA_RUN}} pandoc --list-highlight-styles'
+      - '{{.MICROMAMBA_RUN}} pandoc --list-highlight-languages'

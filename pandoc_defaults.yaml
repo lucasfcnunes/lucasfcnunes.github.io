@@ -1,0 +1,7 @@
+verbosity: INFO
+standalone: true
+highlight-style: zenburn
+from: markdown
+metadata:
+  title: lucasfc.nunes@gmail.com
+  lang: en-US
