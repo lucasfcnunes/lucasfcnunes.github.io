@@ -7,7 +7,7 @@ lucasfcnunes:
   gpg:
     curl:
       # curl + gpg pro tip: import lucasfcnunes's keys
-      curl https://keybase.io/lucasfcnunes/pgp_keys.asc | gpg --import:
+      'curl https://keybase.io/lucasfcnunes/pgp_keys.asc | gpg --import':
     keybase:
       # the Keybase app can push to gpg keychain, too
       keybase pgp pull lucasfcnunes:
