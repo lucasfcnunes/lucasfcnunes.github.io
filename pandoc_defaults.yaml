@@ -6,6 +6,7 @@ metadata:
   title-prefix: lucasfcnunes.com | lucasfc.nunes@gmail.com
   title: 'Home'
   maxwidth: 80% !important
+  backgroundcolor: '#181818'
   # header-includes:
   #   # TODO: fix "<" -> "&lt;"
   #   - <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
