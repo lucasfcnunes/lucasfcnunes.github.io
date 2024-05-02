@@ -3,7 +3,9 @@ verbosity: INFO
 standalone: true
 highlight-style: zenburn
 metadata:
-  title: lucasfcnunes.com | lucasfc.nunes@gmail.com
+  title-prefix: lucasfcnunes.com | lucasfc.nunes@gmail.com
+  title: 'Home'
+  maxwidth: 80% !important
   # header-includes:
   #   # TODO: fix "<" -> "&lt;"
   #   - <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
