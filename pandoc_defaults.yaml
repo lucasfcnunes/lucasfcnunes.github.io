@@ -3,7 +3,7 @@ verbosity: INFO
 standalone: true
 highlight-style: zenburn
 metadata:
-  title-prefix: lucasfcnunes.com | lucasfc.nunes@gmail.com
+  title-prefix: lucasfcnunes.com | contact@lucasfcnunes.com
   title: 'Home'
   maxwidth: 80% !important
   backgroundcolor: '#181818'

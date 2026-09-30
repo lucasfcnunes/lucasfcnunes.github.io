@@ -2,8 +2,7 @@
 # about.yaml
 lucasfcnunes:
   name: Lucas Fernando Cardoso Nunes
-  nickname:
-    pkmatador:
+  resume: https://resume.lucasfcnunes.com
   gpg:
     curl:
       # curl + gpg pro tip: import lucasfcnunes's keys
@@ -17,12 +16,21 @@ lucasfcnunes:
   email:
     lucasfc.nunes@:
       gmail.com: # preferred @ personal | PIX
-      incentive.me:
-        lucas@: # preferred @ incentive.me
+      lucasfcnunes.com:
+        lucas@: # preferred @ lucasfcnunes.com
       poli.ufrj.br: # preferred @ ufrj.br
         ufrj.br:
       protonmail.com:
       outlook.com:
+      # yahoo.com:
+  nickname:
+    lucasfcnunes:
+    pkmatador:
   cnpj:
     37.447.151/0001-00:
+      website: https://lucasfcnunes.com
+      email:
+        contact@lucasfcnunes.com:
+      github: https://github.com/lucasfcnunes-com
+      linkedin: https://www.linkedin.com/company/lucasfcnunes
 ```
