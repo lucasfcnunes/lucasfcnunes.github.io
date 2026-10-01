@@ -1,4 +1,6 @@
+name: lucasfcnunes.github.io
 channels:
   - conda-forge
 dependencies:
+  - go-task
   - pandoc
