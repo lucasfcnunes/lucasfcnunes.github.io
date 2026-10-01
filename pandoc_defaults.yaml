@@ -8,9 +8,17 @@ variables:
     - <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
     - <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
     - <link rel="manifest" href="/static/site.webmanifest">
+    # - |
+    #   <style>
+    #     h1.title {
+    #       font-size: 1.0rem;
+    #       margin-bottom: 0.10rem;
+    #       margin-top: 0.10rem;
+    #     }
+    #   </style>
 metadata:
   title-prefix: lucasfcnunes.com | contact@lucasfcnunes.com
-  title: 'Home'
+  # title: 'Home'
   maxwidth: 80% !important
   backgroundcolor: '#181818'
   lang: en-US
