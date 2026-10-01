@@ -10,6 +10,8 @@
 {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
+  env.PROJECT_ROOT = config.git.root;
+  env.MAMBA_ROOT_PREFIX = "${config.env.PROJECT_ROOT}/.micromamba";
 
   # https://devenv.sh/packages/
   packages = [
