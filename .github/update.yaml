@@ -1,0 +1,42 @@
+name: Update
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  update:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+      - uses: cachix/install-nix-action@v31
+      - uses: cachix/cachix-action@v16
+        with:
+          name: devenv
+      - name: Install devenv.sh
+        run: nix profile add nixpkgs#devenv
+      - name: Build the devenv shell and run any pre-commit hooks
+        run: devenv test
+      - name: Run a multi-line command in the devenv shell
+        shell: devenv shell -- bash -e {0}
+        run: |
+          task index.html
+      - name: Check for changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          # git commit -m "chore: update files [skip ci]"
+          git commit -m "chore: update files"
+          git push
